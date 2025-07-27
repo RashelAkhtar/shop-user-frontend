@@ -1,0 +1,38 @@
+:root {
+  --footer-bg: #111827;
+  --footer-text: #e5e7eb;
+  --footer-link: #ddd6fe;
+  --footer-padding: 2rem 1rem;
+  --footer-font-size: 0.9rem;
+  --footer-line-height: 1.6;
+  --footer-max-width: 1200px;
+  --footer-transition: all 0.3s ease;
+  --footer-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.shop-footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  padding: var(--footer-padding);
+  margin-top: 4rem;
+  box-shadow: var(--footer-shadow);
+}
+
+.footer-container {
+  max-width: var(--footer-max-width);
+  margin: 0 auto;
+  text-align: center;
+  font-size: var(--footer-font-size);
+  line-height: var(--footer-line-height);
+  transition: var(--footer-transition);
+}
+
+.footer-container a {
+  color: var(--footer-link);
+  text-decoration: none;
+  transition: var(--footer-transition);
+}
+
+.footer-container a:hover {
+  text-decoration: underline;
+}

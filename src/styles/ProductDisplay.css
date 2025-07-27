@@ -1,0 +1,70 @@
+/* Variables for consistency */
+:root {
+  --gap: 1.5rem;
+  --radius: 8px;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Base Layout */
+.shop {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.shop__title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+.shop__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: var(--gap);
+}
+
+/* Product Card */
+.product-card {
+  border: 1px solid #e0e0e0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.product-card__image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-card__body {
+  padding: 1rem;
+}
+
+.product-card__title {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.product-card__description {
+  margin: 0 0 1rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.product-card__price {
+  font-weight: bold;
+  color: #2a5db0;
+}
+
+/* Accessibility Focus */
+.product-card:focus {
+  outline: 2px solid #2a5db0;
+}
