@@ -10,7 +10,7 @@ const Products = [
     id: 2,
     name: "Beauty Items",
     description: "Glow enhancing skin cream",
-    image: "../assets/makeup.jpg",
+    image: "https://res.cloudinary.com/dugfdnhdg/image/upload/v1753637580/shop-products/usb2sub9ujbevmjkhygt.jpg",
     route: "/beauty",
   },
   {
