@@ -3,6 +3,7 @@ import "../styles/ProductDisplay.css";
 import Products from "./Products";
 import { useNavigate } from "react-router-dom";
 import Footer from "./Footer";
+import AdBanner from "../AdBanner";
 
 const ProductDisplay = () => {
   const [products, setProducts] = useState([]);
@@ -42,6 +43,7 @@ const ProductDisplay = () => {
           ))}
         </div>
       </main>
+      <AdBanner /> 
       <Footer />
     </div>
   );
