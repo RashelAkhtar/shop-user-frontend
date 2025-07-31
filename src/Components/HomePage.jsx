@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/HomePage.css";
 import Footer from "./Footer";
+import AdBanner from "../AdBanner";
 
 const HomePage = () => {
   return (
@@ -47,6 +48,7 @@ const HomePage = () => {
           </div>
         </section>
       </div>
+       <AdBanner />
       <Footer />
     </div>
   );
