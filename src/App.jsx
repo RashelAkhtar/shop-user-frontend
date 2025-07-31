@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./Components/HomePage";
 import ProductDisplay from "./Components/ProductDisplay";
 import Navbar from "./Components/Navbar";
+import AdBanner from "./AdBanner.jsx";
 
 // Products Routes
 import Clothes from "./Components/ProductsPages/Clothes";
@@ -18,6 +19,7 @@ function App() {
   return (
     <Router>
       <Navbar />
+      <AdBanner />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/products" element={<ProductDisplay />} />
