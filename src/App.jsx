@@ -19,8 +19,8 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <AdBanner />
       <Routes>
+        <AdBanner />
         <Route path="/" element={<HomePage />} />
         <Route path="/products" element={<ProductDisplay />} />
         <Route path="/clothes" element={<Clothes />} />
