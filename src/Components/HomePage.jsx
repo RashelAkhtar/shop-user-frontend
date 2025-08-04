@@ -48,11 +48,8 @@ const HomePage = () => {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
       <AdBanner />
-=======
-       <AdBanner />
->>>>>>> 36718d5bf7287a8a57376e64dfaa7b053797b3b9
+
       <Footer />
     </div>
   );

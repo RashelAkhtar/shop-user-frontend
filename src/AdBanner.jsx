@@ -10,7 +10,6 @@ const AdBanner = () => {
   }, []);
 
   return (
-<<<<<<< HEAD
     <div
       className="ad-container"
       style={{ textAlign: "center", marginTop: "20px" }}
@@ -23,15 +22,6 @@ const AdBanner = () => {
         data-ad-format="auto"
         data-full-width-responsive="true"
       ></ins>
-=======
-    <div className="ad-container" style={{ textAlign: "center", marginTop: "20px" }}>
-      <ins className="adsbygoogle"
-           style={{ display: "block" }}
-           data-ad-client="ca-pub-3345736580776128"
-           data-ad-slot="1234567890"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
->>>>>>> 36718d5bf7287a8a57376e64dfaa7b053797b3b9
     </div>
   );
 };
