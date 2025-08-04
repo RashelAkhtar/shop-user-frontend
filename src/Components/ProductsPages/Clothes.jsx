@@ -1,3 +1,12 @@
 import ProductView from "../ProductView";
-const Clothes = () => <ProductView category="Clothing" />;
+import AdBanner from "../../AdBanner";
+
+const Clothes = () => {
+  return (
+    <div>
+      <ProductView category="Clothing" />
+      <AdBanner />
+    </div>
+  );
+};
 export default Clothes;

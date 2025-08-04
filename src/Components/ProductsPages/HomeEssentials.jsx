@@ -1,7 +1,13 @@
 import ProductView from "../ProductView";
+import AdBanner from "../../AdBanner";
 
 const HomeEssentials = () => {
-  return <ProductView category="Home-Essentials" />;
+  return (
+    <div>
+      <ProductView category="Home-Essentials" />
+      <AdBanner />
+    </div>
+  );
 };
 
 export default HomeEssentials;

@@ -1,7 +1,13 @@
 import ProductView from "../ProductView";
+import AdBanner from "../../AdBanner";
 
 const Jewelry = () => {
-  return <ProductView category="Jewelry" />;
+  return (
+    <div>
+      <ProductView category="Jewelry" />
+      <AdBanner />
+    </div>
+  );
 };
 
 export default Jewelry;
