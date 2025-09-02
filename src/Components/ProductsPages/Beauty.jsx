@@ -1,10 +1,9 @@
 import ProductView from "../ProductView";
-import AdBanner from "../../AdBanner";
 
 const Beauty = () => {
   return (
     <div>
-      <ProductView category="Beauty" /> <AdBanner />
+      <ProductView category="Beauty" />
     </div>
   );
 };

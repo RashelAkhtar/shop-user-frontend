@@ -9,12 +9,15 @@ const ProductView = ({ category }) => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [phoneNumber, setPhoneNumber] = useState("");
   const [bookingSuccess, setBookingSuccess] = useState(false);
+  const [loading, setLoading] = useState(true); // true at first
 
   useEffect(() => {
+    setLoading(true); // start loading whenever category changes
     axios
       .get(`${API}/products/${category}`)
       .then((res) => setProducts(res.data))
-      .catch(() => alert(`Failed to load ${category} products`));
+      .catch(() => alert(`Failed to load ${category} products`))
+      .finally(() => setLoading(false)); // stop loading always
   }, [category]);
 
   const openModal = (product) => {
@@ -48,21 +51,27 @@ const ProductView = ({ category }) => {
 
   return (
     <div className="product-view">
-      <div className="product-grid">
-        {products.map((item) => (
-          <div
-            key={item.id}
-            className="product-card"
-            onClick={() => openModal(item)}
-          >
-            <img src={item.image} alt={item.name} />
-            <h3>{item.name}</h3>
-            <p>₹{item.price}</p>
-            <p>{item.description}</p>
-          </div>
-        ))}
-      </div>
+      {/* 🔄 Loader while fetching */}
+      {loading ? (
+        <div className="loader">Loading products...</div>
+      ) : (
+        <div className="product-grid">
+          {products.map((item) => (
+            <div
+              key={item.id}
+              className="product-card"
+              onClick={() => openModal(item)}
+            >
+              <img src={item.image} alt={item.name} />
+              <h3>{item.name}</h3>
+              <p>₹{item.price}</p>
+              <p>{item.description}</p>
+            </div>
+          ))}
+        </div>
+      )}
 
+      {/* Modal */}
       {selectedProduct && (
         <div className="modal-overlay">
           <div className="modal success">
